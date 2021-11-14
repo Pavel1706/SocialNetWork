@@ -1,0 +1,20 @@
+.nav{
+    grid-area: n;
+    background-color: #d1f3f6;
+    padding: 25px;
+
+}
+
+.sentence a {
+    color: #092324;
+    text-decoration: none;
+}
+
+.sentence a.activeLink{
+    color: #e0a410;
+}
+.avatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
