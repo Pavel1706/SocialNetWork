@@ -28,7 +28,7 @@
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "http://Pavel1706.github.io/right-samurai",
+  "homepage": "http://Pavel1706.github.io/new-social-network",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
