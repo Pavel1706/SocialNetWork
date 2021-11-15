@@ -8,6 +8,8 @@
 .sentence a {
     color: #092324;
     text-decoration: none;
+    padding: 10px;
+
 }
 
 .sentence a.activeLink{
