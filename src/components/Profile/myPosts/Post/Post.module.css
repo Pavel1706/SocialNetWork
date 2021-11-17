@@ -1,9 +1,61 @@
 
 .since {
-    color: indigo;
+    color: black;
+    font-family: 'Poppins', sans-serif;
 }
 .since img {
     width: 50px;
     height: 50px;
     border-radius: 35px;
 }
+
+/*.like {*/
+/*    background-image: url("https://kotto.design/images/kompleks-uslug_1.png");*/
+/*    height: 50px;*/
+/*    width: 50px;*/
+/*}*/
+/*body{*/
+/*    background-color: #eee;*/
+/*}*/
+/*div {*/
+/*    margin: 10% auto;*/
+/*}*/
+/* Базовые стили */
+.like{
+    position: relative;
+    width: 12px;
+    height: 22px;
+    background-color: red;
+    /*box-shadow: -1px 0px 2px #444;*/
+    /* Скругляем верхние углы */
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    /* Определяем угол наклона */
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.like:before {
+    position: absolute;
+    width: 21px;
+    height: 12px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: red;
+    /*box-shadow: 0px 3px 3px #444444;*/
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
+}
+/* Убираем тень при наведении */
+/*.like:hover:before, .like:hover{*/
+/*    box-shadow:none;*/
+/*}*/
+/*div {*/
+/*    margin: 10% auto;*/
+/*}*/
