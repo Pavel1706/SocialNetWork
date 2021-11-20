@@ -4,19 +4,22 @@
     padding: 25px;
 
 }
+.sentence {
+    margin: 10px;
+}
+
 
 .sentence a {
     color: #092324;
     text-decoration: none;
-    padding: 10px;
-
 }
 
 .sentence a.activeLink{
-    color: #e0a410;
+    color: white;
 }
 .avatar{
     width: 45px;
     height: 45px;
     border-radius: 30px;
 }
+
