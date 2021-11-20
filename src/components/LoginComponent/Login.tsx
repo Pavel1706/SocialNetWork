@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import {Field, InjectedFormProps, reduxForm}  from 'redux-form';
-import {CreateField, Input} from "../common/FormsControls/FormsControls";
+import { Input} from "../common/FormsControls/FormsControls";
 import {maxLengthCreator, requiredField} from "../../utils/validators/validators";
 import { connect, useDispatch } from 'react-redux';
 import {getCaptchaTC, LoginTC} from "../../Redux/authReducer";
 import { Redirect } from 'react-router-dom';
 import {AppStateType} from "../../Redux/reduxStore";
 import {Captcha} from "./Captcha";
+import style from './Login.module.css'
 import styles from '../common/FormsControls/FormControls.module.css'
 
 type FormDataType = {
@@ -40,18 +41,18 @@ const LoginForm: React.FC<InjectedFormProps<FormDataType>> =
 
         return (
             <form onSubmit={props.handleSubmit}>
-                <div>
+                <div >
                     {/*{CreateField('Email', 'email', [requiredField,maxLength30],Input)}*/}
-                    <Field placeholder={'Email'} name={'email'}
+                    <Field className={style.input} placeholder={'Email'} name={'email'}
                            validate={[requiredField,maxLength30 ]}
                            component={Input}/>
                 </div>
                 <div>
-                    <Field placeholder={'Password'} type={'password'} name={'password'} component={Input}
+                    <Field className={style.input} placeholder={'Password'} type={'password'} name={'password'} component={Input}
                            validate={[requiredField,maxLength30 ]}
                     />
 
-                    <Field placeholder={'Captcha'} name={'captcha'} component={Input}
+                    <Field className={style.input} placeholder={'Captcha'} name={'captcha'} component={Input}
                            validate={[requiredField,maxLength30 ]}
                     />
 
@@ -63,7 +64,7 @@ const LoginForm: React.FC<InjectedFormProps<FormDataType>> =
                     {props.error}
                 </div>:''}
                 <div>
-                    <button type="submit">Login</button>
+                    <button className={style.logIn} type="submit">Login</button>
                 </div>
             </form>
         )
