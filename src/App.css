@@ -15,8 +15,11 @@
 
   grid-area: c;
 
-  background-color: #f56092;
+  background-color: #93bff5;
 }
+body{
+    font-family:'Josefin Sans', sans-serif;
 
+}
 
 
