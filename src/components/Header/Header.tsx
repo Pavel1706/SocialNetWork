@@ -25,8 +25,8 @@ export const Header = (data: LoginType) => {
 
             <div className={style.loginBlock}>
                 {data.isAuth
-                    ?<div>{ data.data.login} - <button onClick={data.logout}>Log out</button></div>
-                    : <NavLink to={'/login'}>Login</NavLink>}
+                    ?<div>{ data.data.login} - <button className={style.LogOut} onClick={data.logout}>Log out</button></div>
+                    : <NavLink to={'/login'} className={style.Login}>Login</NavLink>}
             </div>
         </header>
     )
