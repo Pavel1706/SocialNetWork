@@ -51,6 +51,33 @@ export const profileAPI = {
     },
     updateStatus(status:string){
         return instance.put(`profile/status/`, {status:status})
+    },
+    savePhoto(photo:any){
+        const formData=new FormData();
+        formData.append('image', photo)
+        return instance.put<AllResponseType<SavePhotoResponseDataType>>(`profile/photo`, formData, {headers: {
+            'Content-Type': 'multipart/form-data'
+            }
+        }).then(res=>res.data);
     }
 }
 
+type SavePhotoResponseDataType={
+    photos: PhotosType
+}
+
+type PhotosType={
+    small: string| null
+    large: string| null
+}
+
+export type AllResponseType<D = {}, RC=ResultCodesEnum>={
+    data:D
+    messages: Array<string>
+    resultCode: RC
+}
+
+export enum ResultCodesEnum {
+    Success=0,
+    Error=1
+}
