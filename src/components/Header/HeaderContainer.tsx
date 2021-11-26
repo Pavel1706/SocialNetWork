@@ -8,7 +8,6 @@ import {getAuthTC, LoginOutTC, setUserDataAC} from "../../Redux/authReducer";
 
 type PathParamsType = {
     userId: string
-
 }
 
 
