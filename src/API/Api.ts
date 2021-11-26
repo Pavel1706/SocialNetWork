@@ -32,8 +32,8 @@ const instance = axios.create({
          return instance.get(`auth/me`);
      },
 
-     loginIn(email:string,password:string, rememberMe:boolean,captcha:boolean){
-         return instance.post(`auth/login`, {email,password,rememberMe,captcha:true});
+     loginIn(email:string,password:string, rememberMe:boolean,captcha:string){
+         return instance.post(`auth/login`, {email,password,rememberMe,captcha});
      },
      loginOut(){
 
