@@ -1,5 +1,5 @@
 import React from 'react';
-import p from "./Conversation.module.css";
+import style from "./Conversation.module.css";
 
 
 
@@ -11,6 +11,6 @@ type MessageType = {
 export const Message =(props: MessageType)=>{
 
     return(
-        <div className={p.message}>{props.message}</div>
+        <div className={style.message}>{props.message}</div>
     )
 }
