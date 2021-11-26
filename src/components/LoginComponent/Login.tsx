@@ -14,7 +14,7 @@ type FormDataType = {
     email: string
     password: string
     rememberMe: boolean
-    captcha:boolean
+    captcha:string
 }
 
 type MapStatePropsType={
@@ -23,7 +23,7 @@ type MapStatePropsType={
 }
 
 type  MapDispatchPropsType={
-    LoginTC: (email: string, password: string, rememberMe: boolean,captcha:boolean)=> void
+    LoginTC: (email: string, password: string, rememberMe: boolean,captcha:string)=> void
 
 }
 
