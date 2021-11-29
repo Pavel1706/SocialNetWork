@@ -25,7 +25,6 @@ type MessageType = {
 export const messageReducer = (state: InitialStateMessageType = initialState, action: NewMessageActionType): InitialStateMessageType => {
     switch (action.type) {
         case "ADD-NEW-MESSAGE":
-
             let newPost: MessageType = {
                 id: new Date().getTime(),
                 message: action.title
@@ -33,6 +32,7 @@ export const messageReducer = (state: InitialStateMessageType = initialState, ac
             return {
                 ...state,
                 messageData: [...state.messageData, newPost],
+
             }
         default:
             return state
