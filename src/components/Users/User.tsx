@@ -29,7 +29,7 @@ export let User = (props:SingleUserType) => {
                         {
                             user.followed
                                 ?
-                                <button disabled={props.followingInProgress.some(id=>id===user.id)} onClick={() => {
+                                <button className={styles.Follow} disabled={props.followingInProgress.some(id=>id===user.id)} onClick={() => {
 
                                     props.setToggleIsFollowing(true,user.id)
                                       props.unFollowUserTC(user.id)
@@ -37,7 +37,7 @@ export let User = (props:SingleUserType) => {
 
                                 }}>UnFollow</button>
                                 :
-                                <button disabled={props.followingInProgress.some(id=>id===user.id)} onClick={() => {
+                                <button className={styles.Follow} disabled={props.followingInProgress.some(id=>id===user.id)} onClick={() => {
 
                                     props.setToggleIsFollowing(true,user.id)
                                     props.followUserTC(user.id)
