@@ -4,7 +4,7 @@ import {AuthMeAPI} from "../API/Api";
 import {Dispatch} from 'redux';
 import {stopSubmit} from "redux-form";
 
-//sdfsklfjkslfjkls
+
 
 let initialState: InitialStateType = {
     data:
@@ -18,9 +18,6 @@ let initialState: InitialStateType = {
     captcha:'',
 }
 
-//ffjsfs
-
-//test comment
 type DataType = {
     id:  number
     email:  string
@@ -37,16 +34,13 @@ export type InitialStateType = {
 export const authReducer = (state = initialState, action: LoginActionsType): InitialStateType => {
     switch (action.type) {
         case "SET-USER-DATA": {
-
             return {
                 ...state,
                 ...action.data,
                 isAuth: action.data.isAuth,
-
             }
         }
         case "GET-CAPTCHA": {
-
             return {
                 ...state,
                 captcha: action.captcha
@@ -80,7 +74,7 @@ export const getAuthTC = ():AppThunk=> async(dispatch) => {
         }
 
 }
-export const LoginTC = (email: string, password: string, rememberMe: boolean,captcha:boolean): AppThunk =>{
+export const LoginTC = (email: string, password: string, rememberMe: boolean,captcha:string): AppThunk =>{
     return async (dispatch) => {
         let response = await AuthMeAPI.loginIn(email, password, rememberMe, captcha)
         if (response.data.resultCode === 0) {
