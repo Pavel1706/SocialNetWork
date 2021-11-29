@@ -25,7 +25,7 @@ export let Users = (props: UsersStateType) => {
 
     return <div>
 
-        <Paginator pageSize={props.pageSize} totalUsersCount={props.totalUsersCount} currentPage={props.currentPage} onPageChanged={props.onPageChanged}/>
+
         {
             props.usersState.map(t =>  <User key={t.id}
                                                 user={t}
@@ -33,6 +33,7 @@ export let Users = (props: UsersStateType) => {
                                              setToggleIsFollowing={props.setToggleIsFollowing}
                                              followUserTC={props.followUserTC}
                                              unFollowUserTC={props.unFollowUserTC}   />)
+
                 // <span>
                 //     <div>
                 //         <NavLink to={'/profile/' + t.id}>
@@ -71,5 +72,10 @@ export let Users = (props: UsersStateType) => {
                 // </span>
 
         }
+        <Paginator pageSize={props.pageSize}
+                   totalUsersCount={props.totalUsersCount}
+                   currentPage={props.currentPage}
+                   onPageChanged={props.onPageChanged}
+                   portionSize={10}/>
     </div>
 }
