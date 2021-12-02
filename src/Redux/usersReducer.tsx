@@ -39,7 +39,7 @@ export const usersReducer = (state = initialState, action: UsersActionsType): In
 
     switch (action.type) {
         case 'FOLLOW':
-            debugger
+
             return {
                 ...state,
                 users: updateObjectInArray(state, action.userId,'id', {followed: true})
@@ -64,6 +64,7 @@ export const usersReducer = (state = initialState, action: UsersActionsType): In
         case "SET-USERS":
             return {...state, users: action.users}
         case 'SET-CURRENT-PAGE':
+
             return {...state, currentPage: action.currentPage}
         case 'SET-TOTAL-COUNT':
             return {...state, totalUsersCount: action.totalCount}
