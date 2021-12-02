@@ -98,4 +98,4 @@ const mapStateToProps=(state:AppStateType): MapStatePropsType=>({
     captcha:state.auth.captcha
 })
 
-export default connect(mapStateToProps, {LoginTC,})(Login)
+export default connect(mapStateToProps, {LoginTC})(Login)
