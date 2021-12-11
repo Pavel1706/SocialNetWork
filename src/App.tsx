@@ -1,8 +1,8 @@
-import React, {ComponentType, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import {Nav} from "./components/Nav/Nav";
 // import {Conversation} from "./components/Conversation/Conversation";
-import {BrowserRouter, HashRouter, Route} from "react-router-dom";
+import {HashRouter, Route} from "react-router-dom";
 import {Friends} from "./components/Friends/Friends";
 import HeaderContainer from './components/Header/HeaderContainer';
 import UsersContainer from "./components/Users/UsersContainer";
@@ -13,7 +13,6 @@ import {initializeTC} from "./Redux/appReducer";
 import {AppStateType, store} from "./Redux/reduxStore";
 import {Preloader} from "./components/common/Preloader/Preloader";
 import {withSuspense} from "./Hoc/withSuspense";
-import {Switch} from "@mui/material";
 
 
 const Conversation = React.lazy(()=> import ('./components/Conversation/Conversation')
