@@ -42,12 +42,6 @@ export function AppContainer() {
                 <div className='app-wrapper-content '>
 
                     <Route path='/conversation' render={withSuspense(Conversation)
-                        // () => {
-                            //     return <React.Suspense fallback={<Preloader loading={true}/>}>
-                            //         <Conversation/>
-                            //     </React.Suspense>
-                            // }
-                        // }
                     }/>
                     <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)
                     }/>
