@@ -7,7 +7,6 @@ import {Friends} from "./components/Friends/Friends";
 import HeaderContainer from './components/Header/HeaderContainer';
 import UsersContainer from "./components/Users/UsersContainer";
 import Login from "./components/LoginComponent/Login";
-// import ProfileContainer from "./components/Profile/ProfileContainer";
 import {Provider, useDispatch, useSelector} from 'react-redux';
 import {initializeTC} from "./Redux/appReducer";
 import {AppStateType, store} from "./Redux/reduxStore";
