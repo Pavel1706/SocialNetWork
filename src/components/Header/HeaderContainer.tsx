@@ -51,10 +51,10 @@ function HeaderContainer(props: PropsType) {
 const mapStateToProps = (state: AppStateType): MapStatePropsType => ({
     data: state.auth.data,
     isAuth: state.auth.isAuth
-
 })
 
 let WithUrlDataContainerComponent = withRouter(HeaderContainer)
+
 
 
 export default connect(mapStateToProps, {

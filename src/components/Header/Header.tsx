@@ -9,14 +9,10 @@ type LoginType = {
     data: DataType
     isAuth: boolean
     logout: ()=> void
-
 }
 
 
 export const Header = (data: LoginType) => {
-
-
-
 
     return (
         <header className={style.header}>
