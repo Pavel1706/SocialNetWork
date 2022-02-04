@@ -1,18 +1,8 @@
 import React from "react";
 import {NewProfileType} from "../../../Redux/profileReducer";
 import {createField, GetStringKeys, Input, Textarea,} from "../../common/FormsControls/FormsControls";
-import {Field, InjectedFormProps, reduxForm} from "redux-form";
+import {InjectedFormProps, reduxForm} from "redux-form";
 import style from "../../LoginComponent/Login.module.css";
-import {requiredField} from "../../../utils/validators/validators";
-import {AppStateType} from "../../../Redux/reduxStore";
-import {connect} from "react-redux";
-
-
-// type ProfileDataFormType = {
-//     data: NewProfileType
-//     isOwner: boolean
-//     goToEditMode:()=>void
-// }
 
 
 type PropsType = {
